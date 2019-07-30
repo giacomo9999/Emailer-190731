@@ -4,4 +4,9 @@ const express = require("express"),
 
 const app = express();
 const port = 3000;
-app.listen((req, res) => console.log("Server running on port" , port));
+app.listen((req, res) => console.log("Server running on port", port));
+
+app.set("view engine", "ejs");
+app.use(express.static("public"));
+
+app.get("/", (req, res) => res.render("index"));
