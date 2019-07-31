@@ -1,21 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link
       href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700&display=swap"
       rel="stylesheet"
-    /> 
+    />
     <link href="styles.css" rel="stylesheet" type="text/css" />
     <title>E-Mail App</title>
-</head>
-<body>
-<div class="container-outer">
-<h2>Sending E-Mail In Node.js</h2>
-    
-</div>
-    
-</body>
+  </head>
+  <body>
+    <div class="container-outer">
+      <h2>E-Mail App</h2>
+      <div class="container-inner">
+        <h3>Send An E-mail</h3>
+        <form class="h-form" action="/send-email" method="post">
+          <label class="h-label" for="to">To</label>
+          <input class="h-input" type="text" class="form-control" name="to" />
+
+          <button class="h-btn" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
 </html>
