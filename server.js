@@ -3,6 +3,7 @@ const express = require("express"),
   nodeMailer = require("nodemailer"),
   bodyParser = require("body-parser");
 
+require("dotenv").config();
 const app = express();
 const port = 3000;
 
@@ -22,8 +23,8 @@ app.post("/send-email", (req, res) => {
     port: 465,
     secure: true,
     auth: {
-      user: "gmarchesi888@gmail.com",
-      pass: "watchWeight66"
+      user: process.env.SOURCE_EMAIL,
+      pass: process.env.SOURCE_PASS
     }
   });
   let mailOptions = {
